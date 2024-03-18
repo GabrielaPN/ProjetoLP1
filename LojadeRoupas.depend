@@ -5,12 +5,13 @@
 	<fstream>
 	"Loja.h"
 
-1710788027 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\loja.cpp
+1710792113 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\loja.cpp
 	"Loja.h"
 
-1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\loja.h
+1710791538 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\loja.h
 	<iostream>
 	<string>
+	<cstdlib>
 	<vector>
 	<algorithm>
 	<fstream>
@@ -23,7 +24,7 @@
 1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\produto.h
 	<string>
 
-1710761555 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\roupa.cpp
+1710788361 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\roupa.cpp
 	"Roupa.h"
 
 1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\roupa.h

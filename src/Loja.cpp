@@ -133,10 +133,9 @@ void Loja::gerarRelatorio() const {
 void Loja::salvarDadosEmArquivo(const std::string lojaDeRoupa) const {
      std::ofstream arquivo(lojaDeRoupa);
     if(arquivo.is_open()){
-        arquivo << getQuantidadeTotal() << endl;
         arquivo << getPrecoTotal() << endl;
         for(const Roupa& r : roupas){
-            arquivo << r.getNome() << "," << r.getPreco() << "," << r.getCor() << "," << r.getTamanho() << "," << r.getMarca() << endl;
+            arquivo << r.getNome() << endl << r.getPreco() << endl << r.getCor() << endl << r.getTamanho() << endl << r.getMarca() << endl;
         }
 
         arquivo.close();
@@ -156,6 +155,24 @@ void Loja::carregarDadosDoArquivo(const std::string& lojaDeRoupa) {
         std::string nome, cor, marca;
         int tamanho;
         float preco;
+
+        std::string line;
+
+        while(getline(arquivo, line)) {
+            Roupa n = Roupa(line, 0.0, "", 0, "");
+            getline(arquivo, line);
+            float preco = stof(line);
+            n.setPreco(preco);
+            getline(arquivo, line);
+            n.setCor(line);
+            getline(arquivo, line);
+            n.setTamanho(stoi(line));
+            getline(arquivo, line);
+            n.setMarca(line);
+
+            roupas.push_back(n);
+            Estoque::adicionarItem(preco);
+        }
 
         // Ler os dados do arquivo e adicionar roupas ao vetor
         while (arquivo >> nome >> preco >> cor >> tamanho >> marca) {
