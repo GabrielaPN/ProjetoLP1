@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1710762971 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\main.cpp
+1710788027 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\main.cpp
 	<iostream>
 	<string>
 	<fstream>
 	"Loja.h"
 
-1710762888 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\loja.cpp
+1710788027 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\loja.cpp
 	"Loja.h"
 
-1710762363 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\loja.h
+1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\loja.h
 	<iostream>
 	<string>
 	<vector>
@@ -17,25 +17,25 @@
 	"Roupa.h"
 	"Estoque.h"
 
-1710761517 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\produto.cpp
+1710788027 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\produto.cpp
 	"Produto.h"
 
-1710761517 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\produto.h
+1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\produto.h
 	<string>
 
 1710761555 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\roupa.cpp
 	"Roupa.h"
 
-1710761555 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\roupa.h
+1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\roupa.h
 	<string>
 	<iostream>
 	"Produto.h"
 
-1710713138 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\estoque.h
+1710788027 c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\include\estoque.h
 	<iostream>
 	<string>
 	<vector>
 
-1710713138 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\estoque.cpp
+1710788027 source:c:\users\gabip\documents\.universidade\2023.3\linguagem de programação\projeto 1 lp1\lojaderoupas\src\estoque.cpp
 	"Estoque.h"
 

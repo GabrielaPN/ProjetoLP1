@@ -57,9 +57,9 @@ void Loja::pesquisarItem(std::string& nomeRoupa) {
 }
 
 void Loja::pesquisarEAlterar(std::string& nomeRoupa) {
-   for (Roupa& r : roupas) {
-        bool encontrado = false;
+    bool encontrado = false;
 
+    for (Roupa& r : roupas) {
         if (r.getNome() == nomeRoupa) {
             encontrado = true;
 
@@ -93,10 +93,10 @@ void Loja::pesquisarEAlterar(std::string& nomeRoupa) {
 
             cout << "Item atualizado com sucesso!" << endl;
         }
-        if (!encontrado) {
+    }
+    if (!encontrado) {
             cout << "Item nao encontrado." << endl;
         }
-    }
 }
 
 void Loja::removerItemPorNome(std::string& nome) {
@@ -133,11 +133,10 @@ void Loja::gerarRelatorio() const {
 void Loja::salvarDadosEmArquivo(const std::string lojaDeRoupa) const {
      std::ofstream arquivo(lojaDeRoupa);
     if(arquivo.is_open()){
-        arquivo << "Quantidade total de itens: " << getQuantidadeTotal() << endl;
-        arquivo << "Valor total de loja: R$" << getPrecoTotal() << endl;
-        arquivo << "Itens disponiveis:" << endl;
+        arquivo << getQuantidadeTotal() << endl;
+        arquivo << getPrecoTotal() << endl;
         for(const Roupa& r : roupas){
-            arquivo << "Nome: " << r.getNome() << " - Preço: R$" << r.getPreco() << " - Cor: " << r.getCor() << " - Tamanho: " << r.getTamanho() << " - Marca: " << r.getMarca() << endl;
+            arquivo << r.getNome() << "," << r.getPreco() << "," << r.getCor() << "," << r.getTamanho() << "," << r.getMarca() << endl;
         }
 
         arquivo.close();
