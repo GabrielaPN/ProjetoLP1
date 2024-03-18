@@ -1,0 +1,5 @@
+Quantidade total de itens: 2
+Valor total de loja: R$38
+Itens disponiveis:
+Nome: vestido - Preço: R$34 - Cor: azul - Tamanho: 36 - Marca: gucci
+Nome: meia - Preço: R$4 - Cor: branca - Tamanho: 37 - Marca: nike
