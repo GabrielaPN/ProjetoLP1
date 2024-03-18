@@ -151,17 +151,12 @@ void Loja::carregarDadosDoArquivo(const std::string& lojaDeRoupa) {
         // Limpar o vetor de roupas para evitar duplicação
         roupas.clear();
 
-        // Variáveis temporárias para armazenar os dados lidos do arquivo
-        std::string nome, cor, marca;
-        int tamanho;
-        float preco;
-
         std::string line;
 
-        while(getline(arquivo, line)) {
-            Roupa n = Roupa(line, 0.0, "", 0, "");
-            getline(arquivo, line);
-            float preco = stof(line);
+        while(getline(arquivo, line)) { //ler todas as linhas que conseguir e dentro do while já é lido as próximas linhas
+            Roupa n = Roupa(line, 0.0, "", 0, ""); //criação de um no objeto que recebe o nome lido
+            getline(arquivo, line); //cada getline é a leitura de cada atributo de roupa
+            float preco = stof(line); //coverter string para float ou int
             n.setPreco(preco);
             getline(arquivo, line);
             n.setCor(line);
@@ -170,14 +165,8 @@ void Loja::carregarDadosDoArquivo(const std::string& lojaDeRoupa) {
             getline(arquivo, line);
             n.setMarca(line);
 
-            roupas.push_back(n);
-            Estoque::adicionarItem(preco);
-        }
-
-        // Ler os dados do arquivo e adicionar roupas ao vetor
-        while (arquivo >> nome >> preco >> cor >> tamanho >> marca) {
-            Roupa novaRoupa(nome, preco, cor, tamanho, marca);
-            roupas.push_back(novaRoupa);
+            roupas.push_back(n); //adiciona o objeto de roupa no vector
+            Estoque::adicionarItem(preco); //soma os precos lidos
         }
 
         arquivo.close();
