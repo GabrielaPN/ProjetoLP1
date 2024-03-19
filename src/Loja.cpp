@@ -64,17 +64,17 @@ void Loja::pesquisarEAlterar(std::string& nomeRoupa) {
             encontrado = true;
 
             cout << "Item encontrado:" << endl;
-            cout << "Nome: " << r.getNome() << " - Preço: R$" << r.getPreco() << " - Cor: " << r.getCor() << " - Tamanho: " << r.getTamanho() << " - Marca: " << r.getMarca() << std::endl;
+            cout << "Nome: " << r.getNome() << " - PreÃ§o: R$" << r.getPreco() << " - Cor: " << r.getCor() << " - Tamanho: " << r.getTamanho() << " - Marca: " << r.getMarca() << std::endl;
 
             Estoque::removerItem(r.getPreco());
 
-            // Alteração dos atributos da roupa encontrada
+            // AlteraÃ§Ã£o dos atributos da roupa encontrada
             float novoPreco, precoAntigo;
             std::string novaCor;
             int novoTamanho;
             std::string novaMarca;
 
-            cout << "Digite a novo preço: ";
+            cout << "Digite a novo preÃ§o: ";
             cin >> novoPreco;
             r.setPreco(novoPreco);
             Estoque::adicionarItem(novoPreco);
@@ -102,7 +102,7 @@ void Loja::pesquisarEAlterar(std::string& nomeRoupa) {
 void Loja::removerItemPorNome(std::string& nome) {
     float precoItem = 0.0;
 
-    // Encontrar o item pelo nome e obter seu preço
+    // Encontrar o item pelo nome e obter seu preÃ§o
     for (const Roupa& r : roupas) {
         if (r.getNome() == nome) {
             precoItem = r.getPreco();
@@ -133,7 +133,7 @@ void Loja::gerarRelatorio() const {
 void Loja::salvarDadosEmArquivo(const std::string lojaDeRoupa) const {
      std::ofstream arquivo(lojaDeRoupa);
     if(arquivo.is_open()){
-        arquivo << getPrecoTotal() << endl;
+       //arquivo << getPrecoTotal() << endl;
         for(const Roupa& r : roupas){
             arquivo << r.getNome() << endl << r.getPreco() << endl << r.getCor() << endl << r.getTamanho() << endl << r.getMarca() << endl;
         }
@@ -148,14 +148,14 @@ void Loja::salvarDadosEmArquivo(const std::string lojaDeRoupa) const {
 void Loja::carregarDadosDoArquivo(const std::string& lojaDeRoupa) {
     std::ifstream arquivo(lojaDeRoupa);
     if (arquivo.is_open()) {
-        // Limpar o vetor de roupas para evitar duplicação
+        // Limpar o vetor de roupas para evitar duplicaÃ§Ã£o
         roupas.clear();
 
         std::string line;
 
-        while(getline(arquivo, line)) { //ler todas as linhas que conseguir e dentro do while já é lido as próximas linhas
-            Roupa n = Roupa(line, 0.0, "", 0, ""); //criação de um no objeto que recebe o nome lido
-            getline(arquivo, line); //cada getline é a leitura de cada atributo de roupa
+        while(getline(arquivo, line)) { //ler todas as linhas que conseguir e dentro do while jÃ¡ Ã© lido as prÃ³ximas linhas
+            Roupa n = Roupa(line, 0.0, "", 0, ""); //criaÃ§Ã£o de um no objeto que recebe o nome lido
+            getline(arquivo, line); //cada getline Ã© a leitura de cada atributo de roupa
             float preco = stof(line); //coverter string para float ou int
             n.setPreco(preco);
             getline(arquivo, line);
